@@ -1,32 +1,29 @@
-group 'cn.thinkingdata.flutter'
-version '1.0'
-
 buildscript {
     repositories {
         google()
-        jcenter()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.tools.build:gradle:7.4.2'
     }
 }
 
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdk 34
+    namespace 'cn.thinkingdata.flutter'
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
